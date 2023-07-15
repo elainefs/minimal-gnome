@@ -42,4 +42,4 @@ O conteúdo desse repositório está sob a licença do MIT. Consulte o arquivo [
 
 ---
 
-Made with <3 by [Elaine Ferreira](https://github.com/elainefs)
+Made with ❤️ by [Elaine Ferreira](https://github.com/elainefs)
