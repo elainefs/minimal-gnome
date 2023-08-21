@@ -118,6 +118,20 @@ if [ "$nodejs" == "s" -o "$nodejs" == "S" -o "$nodejs" == "" ]; then
   apt install nodejs
 fi
 
+echo "##### Instalar ferramentas de manipulação de imagens #####"
+
+echo "Deseja instalar o Inkscape? (s/n)"
+read inkscape
+if [ "$inkscape" == "s" -o "$inkscape" == "S" -o "$inkscape" == "" ]; then
+  apt install inkscape
+fi
+
+echo "Deseja instalar o Gimp? (s/n)"
+read gimp
+if [ "$gimp" == "s" -o "$gimp" == "S" -o "$gimp" == "" ]; then
+  apt install gimp
+fi
+
 user=`users`
 echo "Deseja adicionar o usuário $user ao grupo sudo? (s/n)"
 read addusersudo
