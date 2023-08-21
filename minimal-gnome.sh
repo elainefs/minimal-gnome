@@ -84,6 +84,40 @@ else
   echo "Você não terá nenhum navegador disponível ao finalizar a instalação."
 fi
 
+echo "##### Configurar ambiente de desenvolvimento #####"
+
+echo "Deseja instalar o Visual Studio Code? (s/n)"
+read vscode
+if [ "$vscode" == "s" -o "$vscode" == "S" -o "$vscode" == "" ]; then
+  echo "##### Baixando o Visual Studio Code #####"
+
+  wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O vscode.deb
+
+  echo "##### Instalando o Visual Studio Code #####"
+
+  dpkg -i vscode.deb
+
+  echo "##### Corrigindo dependências #####"
+
+  apt install -f -y
+
+  rm vscode.deb
+
+  echo "##### Instalação do Visual Studio Code Finalizada #####"
+fi
+
+echo "Deseja instalar o Filezilla? (s/n)"
+read filezilla
+if [ "$filezilla" == "s" -o "$vscode" == "S" -o "$vscode" == "" ]; then
+ apt install filezilla
+fi
+
+echo "Deseja instalar o Nodejs? (s/n)"
+read nodejs
+if [ "$nodejs" == "s" -o "$nodejs" == "S" -o "$nodejs" == "" ]; then
+  apt install nodejs
+fi
+
 user=`users`
 echo "Deseja adicionar o usuário $user ao grupo sudo? (s/n)"
 read addusersudo
