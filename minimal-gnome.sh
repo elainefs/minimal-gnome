@@ -18,7 +18,7 @@ echo "--- Instalação da Interface Gráfica Gnome Finalizada ---"
 
 echo "##### Instalação dos pacotes essenciais #####"
 
-apt install --no-install-recommends gdm3 nautilus tilix gnome-tweaks gnome-control-center network-manager gnome-software pulseaudio shotwell vlc gnome-sushi ffmpegthumbnailer libgdk-pixbuf2.0-bin ntfs-3g sudo -y
+apt install --no-install-recommends gdm3 nautilus tilix gnome-tweaks gnome-control-center network-manager gnome-software pulseaudio shotwell vlc gnome-sushi ffmpegthumbnailer libgdk-pixbuf2.0-bin ntfs-3g sudo firefox-esr -y
 
 echo "--- Instalação dos pacotes essenciais Finalizada ---"
  
@@ -35,43 +35,6 @@ plugins=ifupdown,keyfile
 
 [ifupdown]
 managed=true" > /etc/NetworkManager/NetworkManager.conf
-
-echo "##### Instalação de Navegadores #####"
-
-echo "Qual navegador você deseja instalar:
-Para instalar o Google Chrome digite   1
-Para instalar o Firefox digite         2
-Para instalar os dois digite           3
-Para não instalar nenhum digite        0"
-read browser
-if [ "$browser" == 1 ]; then
-  apt install wget -y
-
-  echo "##### Instalando o Google Chrome #####"
-
-  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O chrome.deb
-  dpkg -i chrome.deb
-  apt install -f -y
-  rm chrome.deb
-
-elif [ "$browser" == 2 ]; then
-  echo "##### Instalando o Firefox #####"
-  
-  apt install --no-install-recommends firefox-esr -y
-
-elif [ "$browser" == 3 ]; then
-  echo "##### Instalando Firefox e Google Chrome #####"
-  apt install firefox-esr -y
-
-  apt install wget -y
-  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O chrome.deb
-  dpkg -i chrome.deb
-  apt install -f -y
-  rm chrome.deb
-
-else
-  echo "Você não terá nenhum navegador disponível ao finalizar a instalação."
-fi
 
 echo "##### Configurar ambiente de desenvolvimento #####"
 
