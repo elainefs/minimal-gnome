@@ -43,7 +43,7 @@ read vscode
 if [ "$vscode" == "s" -o "$vscode" == "S" -o "$vscode" == "" ]; then
   echo "##### Instalando o Visual Studio Code #####"
 
-  wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O vscode.deb
+  wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode.deb
   dpkg -i vscode.deb
   apt install -f -y
   rm vscode.deb
