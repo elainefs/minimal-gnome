@@ -51,8 +51,8 @@ echo "Deseja instalar o suporte a apps Snaps? [S/n]"
 read snap
 if [ "$snap" == "s" -o "$snap" == "S" -o "$snap" == "" ]; then
   echo "##### Instalando suporte a Snaps #####"
-    apt update
-    apt install snapd
+    apt update -y
+    apt install snapd -y
     snap install core
 fi
 
