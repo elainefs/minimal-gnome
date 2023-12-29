@@ -36,6 +36,15 @@ plugins=ifupdown,keyfile
 [ifupdown]
 managed=true" > /etc/NetworkManager/NetworkManager.conf
 
+echo "Deseja instalar o suporte a apps Flatpaks? [S/n]"
+read flatpak
+if [ "$flatpak" == "s" -o "$flatpak" == "S" -o "$flatpak" == "" ]; then
+  echo "##### Instalando suporte a Flatpaks #####"
+  apt install flatpak -y
+  apt install gnome-software-plugin-flatpak -y
+  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+fi
+
 echo "##### Configurar ambiente de desenvolvimento #####"
 
 echo "Deseja instalar o Visual Studio Code? [S/n]"
