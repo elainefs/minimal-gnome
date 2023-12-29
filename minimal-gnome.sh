@@ -36,6 +36,8 @@ plugins=ifupdown,keyfile
 [ifupdown]
 managed=true" > /etc/NetworkManager/NetworkManager.conf
 
+echo "Configurações de rede finalizada!"
+
 echo "Deseja instalar o suporte a apps Flatpaks? [S/n]"
 read flatpak
 if [ "$flatpak" == "s" -o "$flatpak" == "S" -o "$flatpak" == "" ]; then
