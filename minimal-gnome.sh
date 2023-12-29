@@ -45,6 +45,22 @@ if [ "$flatpak" == "s" -o "$flatpak" == "S" -o "$flatpak" == "" ]; then
   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 fi
 
+echo "Deseja instalar o suporte a apps Snaps? [S/n]"
+read snap
+if [ "$snap" == "s" -o "$snap" == "S" -o "$snap" == "" ]; then
+  echo "##### Instalando suporte a Snaps #####"
+    apt update
+    apt install snapd
+    snap install core
+fi
+
+echo "Deseja instalar a Snap Store? [S/n]"
+read snapstore
+if [ "$snapstore" == "s" -o "$snapstore" == "S" -o "$snapstore" == "" ]; then
+  echo "##### Instalando Snap Store #####"
+    snap install snap-store
+fi
+
 echo "##### Configurar ambiente de desenvolvimento #####"
 
 echo "Deseja instalar o Visual Studio Code? [S/n]"
