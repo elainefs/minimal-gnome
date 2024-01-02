@@ -18,7 +18,7 @@ echo "--- Instalação da Interface Gráfica Gnome Finalizada ---"
 
 echo "##### Instalação dos pacotes essenciais #####"
 
-apt install --no-install-recommends gdm3 nautilus tilix gedit gnome-tweaks gnome-control-center gnome-calculator network-manager gnome-software pulseaudio shotwell vlc gnome-sushi ffmpegthumbnailer libgdk-pixbuf2.0-bin ntfs-3g wget sudo firefox-esr -y
+apt install --no-install-recommends gdm3 nautilus tilix gedit gnome-tweaks gnome-control-center gnome-calculator network-manager gnome-software pulseaudio shotwell vlc gnome-sushi ffmpegthumbnailer libgdk-pixbuf2.0-bin ntfs-3g wget gvfs-backends mtp-tools sudo firefox-esr -y
 
 echo "--- Instalação dos pacotes essenciais Finalizada ---"
  
