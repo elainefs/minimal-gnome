@@ -80,21 +80,21 @@ echo "Deseja instalar o Filezilla? [S/n]"
 read filezilla
 if [ "$filezilla" == "s" -o "$filezilla" == "S" -o "$filezilla" == "" ]; then
   echo "##### Instalando o Filezilla #####"
-  apt install --no-install-recommends filezilla -y
+  apt install filezilla -y
 fi
 
 echo "Deseja instalar o Nodejs? [S/n]"
 read nodejs
 if [ "$nodejs" == "s" -o "$nodejs" == "S" -o "$nodejs" == "" ]; then
   echo "##### Instalando o Nodejs #####"
-  apt install --no-install-recommends nodejs -y
+  apt install nodejs -y
 fi
 
 echo "Deseja instalar o Virt Manager? [S/n]"
 read virtmanager
 if [ "$virtmanager" == "s" -o "$virtmanager" == "S" -o "$virtmanager" == "" ]; then
   echo "##### Instalando o Virt Manager #####"
-  apt install --no-install-recommends virt-manager qemu-system libvirt-daemon-system -y
+  apt install virt-manager -y
 fi
 
 echo "##### Instalar ferramentas de manipulação de imagens #####"
