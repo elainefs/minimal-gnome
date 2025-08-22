@@ -28,6 +28,12 @@ apt install firmware-linux firmware-linux-free firmware-linux-nonfree -y
 
 echo "--- Instalação dos firmwares Finalizada ---"
 
+echo "##### Instalação de codecs #####"
+
+apt install libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+
+echo "--- Instalação dos codecs Finalizada ---"
+
 echo "Configurações de rede..."
 
 echo "[main]
