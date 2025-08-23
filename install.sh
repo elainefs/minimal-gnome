@@ -30,7 +30,7 @@ echo "--- Instalação dos firmwares Finalizada ---"
 
 echo "##### Instalação de codecs #####"
 
-apt install libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+apt install libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi -y
 
 echo "--- Instalação dos codecs Finalizada ---"
 
